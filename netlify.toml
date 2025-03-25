@@ -1,0 +1,14 @@
+[build]
+  command = "npm install && npm run build"
+  publish = "static"
+  functions = "functions"
+
+[dev]
+  command = "npm start"
+  port = 8080
+  publish = "static"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
