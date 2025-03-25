@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
   // Load featured items on homepage
-  fetch("/items")
+  fetch("/.netlify/functions/items")
     .then((response) => response.json())
     .then((items) => {
       const featuredContainer = document.getElementById("featuredItems");
@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 function addItemToCart(itemId) {
-  fetch(`/items/${itemId}`)
+  fetch(`/.netlify/functions/items/${itemId}`)
     .then((response) => response.json())
     .then((item) => {
       cart.addItem(item);

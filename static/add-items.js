@@ -34,7 +34,7 @@ function handleFormSubmit(e) {
     description
   };
   
-  fetch('/items', {
+  fetch('/.netlify/functions/items', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',

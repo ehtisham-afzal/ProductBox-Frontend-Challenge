@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function fetchItems() {
-  fetch('/items')
+  fetch('/.netlify/functions/items')
     .then(response => response.json())
     .then(items => {
       allItems = items;
