@@ -1,15 +1,156 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset=utf-8>
-  <title>RandoStore</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RandoStore | Discover Unique Random Items</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="styles.css" rel="stylesheet">
 </head>
 <body>
-  <h1>RandoStore Homepage</h1>
-  <p>
-    <a href="/add-items.html">Put Items up for Sale</a><br>
-    <a href="/items.html">Browse our Items!</a><br>
-    <a href="/checkout.html">Check out</a>
-  </p>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="/" style="color: var(--primary);">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-shop me-2" viewBox="0 0 16 16">
+          <path d="M2.97 1.35A1 1 0 0 1 3.73 1h8.54a1 1 0 0 1 .76.35l2.609 3.044A1.5 1.5 0 0 1 16 5.37v.255a2.375 2.375 0 0 1-4.25 1.458A2.371 2.371 0 0 1 9.875 8 2.37 2.37 0 0 1 8 7.083 2.37 2.37 0 0 1 6.125 8a2.37 2.37 0 0 1-1.875-.917A2.375 2.375 0 0 1 0 5.625V5.37a1.5 1.5 0 0 1 .361-.976l2.61-3.045zm1.78 4.275a1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0 1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0 1.375 1.375 0 1 0 2.75 0V5.37a.5.5 0 0 0-.12-.325L12.27 2H3.73L1.12 5.045A.5.5 0 0 0 1 5.37v.255a1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0zM1.5 8.5A.5.5 0 0 1 2 9v6h1v-5a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1v5h6V9a.5.5 0 0 1 1 0v6h.5a.5.5 0 0 1 0 1H.5a.5.5 0 0 1 0-1H1V9a.5.5 0 0 1 .5-.5zM4 15h3v-5H4v5zm5-5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1v-3zm3 0h-2v3h2v-3z"/>
+        </svg>
+        RandoStore
+      </a>
+      <div class="d-flex align-items-center">
+        <a href="/items.html" class="btn btn-outline-primary me-2 d-none d-md-inline-block">Browse Items</a>
+        <a href="/checkout.html" class="btn btn-primary position-relative">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
+            <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+          </svg>
+          <span id="cartCounter" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger cart-badge">0</span>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero-section text-center py-5">
+    <div class="container py-5">
+      <h1 class="display-4 fw-bold mb-3">Discover Unique Random Items</h1>
+      <p class="lead mb-4">The marketplace where anyone can buy and sell the most unexpected treasures.</p>
+      <div class="d-flex justify-content-center gap-3">
+        <a href="/items.html" class="btn btn-light btn-lg px-4">Browse Items</a>
+        <a href="/add-items.html" class="btn btn-outline-light btn-lg px-4">Sell an Item</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Section -->
+  <section class="container my-5 py-5">
+    <h2 class="text-center mb-5">Why Choose RandoStore</h2>
+    <div class="row g-4 justify-content-center d-flex items-center p-4">
+      <div class="col-md-4 text-start border rounded-4 overflow-hidden p-4 shadow-sm w-full">
+        <div class="feature-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" viewBox="0 0 16 16">
+            <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zM8 1.918l-.797.161A4.002 4.002 0 0 0 4 6c0 .628-.134 2.197-.459 3.742-.16.767-.376 1.566-.663 2.258h10.244c-.287-.692-.502-1.49-.663-2.258C12.134 8.197 12 6.628 12 6a4.002 4.002 0 0 0-3.203-3.92L8 1.917zM14.22 12c.223.447.481.801.78 1H1c.299-.199.557-.553.78-1C2.68 10.2 3 6.88 3 6c0-2.42 1.72-4.44 4.005-4.901a1 1 0 1 1 1.99 0A5.002 5.002 0 0 1 13 6c0 .88.32 4.2 1.22 6z"/>
+          </svg>
+        </div>
+        <h3 class="h4">Easy to Use</h3>
+        <p class="text-muted">Simple interface to buy and sell items with just a few clicks.</p>
+      </div>
+      <div class="col-md-4 text-start border rounded-4 overflow-hidden p-4 shadow-sm w-full">
+        <div class="feature-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" viewBox="0 0 16 16">
+            <path d="M11 5.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-1z"/>
+            <path d="M2 2a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H2zm13 2v5H1V4a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1zm-1 9H2a1 1 0 0 1-1-1v-1h14v1a1 1 0 0 1-1 1z"/>
+          </svg>
+        </div>
+        <h3 class="h4">Find Unique Items</h3>
+        <p class="text-muted">Discover one-of-a-kind treasures you won't find anywhere else.</p>
+      </div>
+      <div class="col-md-4 text-start border rounded-4 overflow-hidden p-4 shadow-sm w-full">
+        <div class="feature-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" viewBox="0 0 16 16">
+            <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm2-1a1 1 0 0 0-1 1v1h14V4a1 1 0 0 0-1-1H2zm13 4H1v5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V7z"/>
+            <path d="M2 10a1 1 0 0 1 1-1h1a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1v-1z"/>
+          </svg>
+        </div>
+        <h3 class="h4">Secure Transactions</h3>
+        <p class="text-muted">Shop with confidence knowing your transactions are protected.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Items Section -->
+  <section class="container my-5 py-5 bg-light rounded-3">
+    <h2 class="text-center mb-5">Featured Items</h2>
+    <div class="row row-cols-1 row-cols-md-3 g-4" id="featuredItems">
+      <!-- Items will be loaded via JavaScript -->
+      <div class="col-12 text-center py-4" id="noItemsMessage">
+        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" class="bi bi-box-seam mb-3" viewBox="0 0 16 16">
+          <path d="M8.186 1.113a.5.5 0 0 0-.372 0L1.846 3.5l2.404.961L10.404 2l-2.218-.887zm3.564 1.426L5.596 5 8 5.961 14.154 3.5l-2.404-.961zm3.25 1.7-6.5 2.6v7.922l6.5-2.6V4.24zM7.5 14.762V6.838L1 4.239v7.923l6.5 2.6zM7.443.184a1.5 1.5 0 0 1 1.114 0l7.129 2.852A.5.5 0 0 1 16 3.5v8.662a1 1 0 0 1-.629.928l-7.185 2.874a.5.5 0 0 1-.372 0L.63 13.09a1 1 0 0 1-.63-.928V3.5a.5.5 0 0 1 .314-.464L7.443.184z"/>
+        </svg>
+        <h4>No items available yet</h4>
+        <p class="text-muted">Be the first to add an item!</p>
+        <a href="/add-items.html" class="btn btn-primary mt-2">Start Selling</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sell CTA Section -->
+  <section class="container my-5 py-5">
+    <div class="row align-items-center">
+      <div class="col-md-6">
+        <h2>Have Something Random to Sell?</h2>
+        <p class="lead">List your unique items on RandoStore and connect with buyers looking for exactly what you have.</p>
+        <a href="/add-items.html" class="btn btn-primary btn-lg">Start Selling Now</a>
+      </div>
+      <div class="col-md-6">
+        <img src="https://images.unsplash.com/photo-1555529669-e69e7aa0ba9a?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Random items" class="img-fluid rounded-3 shadow">
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 mb-4 mb-lg-0">
+          <h5 class="mb-3">RandoStore</h5>
+          <p>The marketplace for all things random. Buy, sell, and discover unique items.</p>
+        </div>
+        <div class="col-lg-2 col-md-4 mb-4 mb-md-0">
+          <h5 class="mb-3">Shop</h5>
+          <ul class="list-unstyled">
+            <li class="mb-2"><a href="/items.html" class="text-white text-decoration-none">All items</a></li>
+            <li class="mb-2"><a href="/add-items.html" class="text-white text-decoration-none">Sell an item</a></li>
+            <li class="mb-2"><a href="/checkout.html" class="text-white text-decoration-none">Your Cart</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-2 col-md-4 mb-4 mb-md-0">
+          <h5 class="mb-3">Help</h5>
+          <ul class="list-unstyled">
+            <li class="mb-2"><a href="#" class="text-white text-decoration-none">FAQ</a></li>
+            <li class="mb-2"><a href="#" class="text-white text-decoration-none">Shipping</a></li>
+            <li class="mb-2"><a href="#" class="text-white text-decoration-none">Returns</a></li>
+            <li class="mb-2"><a href="#" class="text-white text-decoration-none">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-4 col-md-4">
+          <h5 class="mb-3">Newsletter</h5>
+          <p>Subscribe to get updates on new items and promotions.</p>
+          <div class="input-group mb-3">
+            <input type="email" class="form-control" placeholder="Your email">
+            <button class="btn btn-primary" type="button">Subscribe</button>
+          </div>
+        </div>
+      </div>
+      <hr class="my-4 bg-light">
+      <div class="text-center">
+        <small>© 2025 RandoStore. All rights reserved.</small>
+      </div>
+    </div>
+  </footer>
+
+  <script src="cart.js"></script>
+  <script src="home.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

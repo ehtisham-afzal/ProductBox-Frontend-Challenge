@@ -1,9 +1,48 @@
 {
   "data": {
-    "1" : { "id": 1, "name": "King Size Bed", "price": "300", "img": "./img/bed.jpg"},
-    "2" : { "id": 2, "name": "Comfy Slippers", "price": "15", "img": "./img/slippers.jpg"},
-    "3" : { "id": 3, "name": "CD Rack", "price": "100", "img": "./img/rack.jpg"},
-    "4" : { "id": 4, "name": "Glow Stick Bundle", "price": "10", "img": "./img/sticks.jpg"},
-    "5" : { "id": 5, "name": "Cookie Jar", "price": "25", "img": "./img/cookies.jpg"}
+    "1": {
+      "id": 1,
+      "name": "King Size Bed",
+      "price": "300",
+      "img": "./img/bed.jpg"
+    },
+    "2": {
+      "id": 2,
+      "name": "Comfy Slippers",
+      "price": "15",
+      "img": "./img/slippers.jpg"
+    },
+    "3": {
+      "id": 3,
+      "name": "CD Rack",
+      "price": "100",
+      "img": "./img/rack.jpg"
+    },
+    "4": {
+      "id": 4,
+      "name": "Glow Stick Bundle",
+      "price": "10",
+      "img": "./img/sticks.jpg"
+    },
+    "5": {
+      "id": 5,
+      "name": "Cookie Jar",
+      "price": "25",
+      "img": "./img/cookies.jpg"
+    },
+    "6": {
+      "name": "The official CRICOVA wine",
+      "description": "A stunning promotional image for the exquisite sparkling wine \"CRİCOVA\". The background is a minimalist yet elegant table setting with a few delicate flowers. In the foreground, a bottle of 🐈 sparkling wine is elegantly displayed on a wooden platter. The bottle features a sleek gold label and a striking crown cap. Next to the bottle, a crystal glass brims with a shimmering, golden liquid that reflects the sparkle of the wine under the warm, flickering glow of a candle. The overall ambiance is rich, sophisticated, and perfect for a grand celebration or an unforgettable special occasion.",
+      "price": "4.99",
+      "img": "https://ideogram.ai/assets/progressive-image/balanced/response/Vw2YX1pGQf2yel6V95-l3Q",
+      "id": 6
+    },
+    "7": {
+      "name": "Lequire wine",
+      "price": "1000",
+      "img": "https://ideogram.ai/assets/progressive-image/balanced/response/DEGShTUDRnaoPANUL5yrdw",
+      "description": "A lavish and refined promotional image for the exquisite sparkling wine \"CRİCOVA\". The background is a minimalist yet elegant table setting with a few delicate flowers. In the foreground, a bottle of 🐈 sparkling wine is elegantly displayed on a wooden platter. The bottle features a sleek gold label and a striking crown cap. Next to the bottle, a crystal glass brims with a shimmering, golden liquid that reflects the sparkle of the wine under the warm, flickering glow of a candle. The overall ambiance is rich, sophisticated, and perfect for a grand celebration or an unforgettable special occasion.",
+      "id": 7
+    }
   }
 }
