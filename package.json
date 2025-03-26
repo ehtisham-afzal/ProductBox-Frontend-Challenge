@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "start": "node index.js",
-    "build": "mkdir -p static && cp -r static/* static/",
+    "build": "echo Static directory already exists",
     "dev": "netlify dev"
   },
   "dependencies": {
